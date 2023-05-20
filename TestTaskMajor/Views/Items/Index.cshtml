@@ -1,0 +1,31 @@
+﻿@model List<TestTaskMajor.Models.Domain.Item>
+
+@{
+}
+
+<style>
+    .card {
+        height: 100%;
+    }
+</style>
+
+<h1>Товары</h1>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 align-items-stretch mt-5">
+                <div class="card d-flex flex-fill" style="width: 18rem; margin-top: 5px">
+                    <img src="@item.Img" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">@item.Price рублей</h6>
+                        <p class="card-text">@item.Description</p>
+                        <a href="Items/View/@item.Id" class="btn btn-primary">Посмотреть</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

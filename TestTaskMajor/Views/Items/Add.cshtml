@@ -1,0 +1,26 @@
+﻿@model TestTaskMajor.Models.AddItemViewModel
+
+@{
+}
+
+<h1>Добавить товар</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Название товара</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Описание товара</label>
+        <input type="text" class="form-control" asp-for="Description">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Цена</label>
+        <input type="number" class="form-control" asp-for="Price">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Ссылка на изображение</label>
+        <input type="text" class="form-control" asp-for="Img">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
